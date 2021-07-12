@@ -36,7 +36,7 @@
 		F87F1D5C269C258300E9BB38 = {
 			isa = PBXGroup;
 			children = (
-				F87F1D67269C258300E9BB38 /* social-media */,
+				F87F1D67269C258300E9BB38 /* SocialMedia */,
 				F87F1D66269C258300E9BB38 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,7 +49,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F87F1D67269C258300E9BB38 /* social-media */ = {
+		F87F1D67269C258300E9BB38 /* SocialMedia */ = {
 			isa = PBXGroup;
 			children = (
 				F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */,
@@ -58,7 +58,7 @@
 				F87F1D71269C258500E9BB38 /* Info.plist */,
 				F87F1D6E269C258500E9BB38 /* Preview Content */,
 			);
-			path = "social-media";
+			path = SocialMedia;
 			sourceTree = "<group>";
 		};
 		F87F1D6E269C258500E9BB38 /* Preview Content */ = {
