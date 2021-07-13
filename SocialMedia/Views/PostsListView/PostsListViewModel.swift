@@ -11,6 +11,9 @@ import Foundation
 class PostsListViewModel: ObservableObject {
     
     @Published
+    private (set) var postsFetched = false
+    
+    @Published
     private (set) var posts: [Post] = []
     
     private var cancellable: AnyCancellable?
@@ -22,10 +25,21 @@ class PostsListViewModel: ObservableObject {
     }
     
     func fetchPosts() {
+        
+        initializePlaceHolders()
+        
         cancellable = postsFetcher.fetchPosts()
             .receive(on: RunLoop.main).sink { _ in }
         receiveValue: { [weak self] newPosts in
             self?.posts = newPosts
+            self?.postsFetched = true
         }
     }
+    
+    private func initializePlaceHolders() {
+            postsFetched = false
+            posts = (0...11).map { Post(id: $0,
+                                        title: "Placeholder",
+                                        body: "Alias alias cumque. Voluptatem ipsa repudiandae ipsum reiciendis illo. Incidunt rerum id architecto doloribus." ) }
+        }
 }

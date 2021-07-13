@@ -30,6 +30,7 @@ struct PostsListView: View {
                                    tag: post.id,
                                    selection: $selection) {}
                 }
+                .unredacted(when: viewModel.postsFetched)
             }
             .navigationTitle("Posts")
         }
@@ -41,5 +42,17 @@ struct PostsListView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         PostsListView()
+    }
+}
+
+extension View {
+    
+    @ViewBuilder
+    func unredacted(when condition: Bool) -> some View {
+        if condition {
+            unredacted()
+        } else {
+            redacted(reason: .placeholder)
+        }
     }
 }

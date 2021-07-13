@@ -45,6 +45,7 @@ struct PostCommentsView: View {
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(8)
                 }
+                .unredacted(when: viewModel.commentsFetched)
             }
             .padding(.top, padding)
             .padding(.leading, padding)
