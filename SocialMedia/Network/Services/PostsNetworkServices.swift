@@ -10,6 +10,7 @@ import Foundation
 
 protocol PostsFetcher {
     func fetchPosts() -> AnyPublisher<[Post], Error>
+    func fetchCommentsFromPost(_ id: Int) -> AnyPublisher<[Comment], Error> 
 }
 
 class PostsNetworkServices: PostsFetcher, NetworkService {
