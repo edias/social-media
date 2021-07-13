@@ -22,6 +22,7 @@
 		F89951AC269D8F9100950525 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951AB269D8F9100950525 /* PostView.swift */; };
 		F89951AF269D9A1600950525 /* PostCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951AE269D9A1600950525 /* PostCommentsView.swift */; };
 		F89951B1269D9A7900950525 /* PostCommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951B0269D9A7900950525 /* PostCommentsViewModel.swift */; };
+		F89951BB269DA83100950525 /* ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951BA269DA83100950525 /* ColorPallete.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F89951AB269D8F9100950525 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		F89951AE269D9A1600950525 /* PostCommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsView.swift; sourceTree = "<group>"; };
 		F89951B0269D9A7900950525 /* PostCommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsViewModel.swift; sourceTree = "<group>"; };
+		F89951BA269DA83100950525 /* ColorPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallete.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		F87F1D67269C258300E9BB38 /* SocialMedia */ = {
 			isa = PBXGroup;
 			children = (
+				F89951B9269DA82800950525 /* Shared */,
 				F89951AD269D8FB800950525 /* Views */,
 				F81C54E0269C2DDB0064AE9F /* Settings */,
 				F81C54CE269C28640064AE9F /* Network */,
@@ -164,6 +167,14 @@
 				F89951B0269D9A7900950525 /* PostCommentsViewModel.swift */,
 			);
 			path = PostCommentsView;
+			sourceTree = "<group>";
+		};
+		F89951B9269DA82800950525 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F89951BA269DA83100950525 /* ColorPallete.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +253,7 @@
 				F89951AF269D9A1600950525 /* PostCommentsView.swift in Sources */,
 				F81C54DF269C2DD30064AE9F /* Environment.swift in Sources */,
 				F81C54DD269C2D9D0064AE9F /* PostsNetworkServices.swift in Sources */,
+				F89951BB269DA83100950525 /* ColorPallete.swift in Sources */,
 				F89951AA269D8F4E00950525 /* PostsListViewModel.swift in Sources */,
 				F81C54D8269C2D480064AE9F /* Post.swift in Sources */,
 				F87F1D69269C258300E9BB38 /* SocialMediaApp.swift in Sources */,

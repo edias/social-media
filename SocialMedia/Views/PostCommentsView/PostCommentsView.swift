@@ -28,7 +28,7 @@ struct PostCommentsView: View {
                 
                 Text("\(post.body)")
                     .font(.body)
-                    .foregroundColor(Color.black.opacity(0.8))
+                    .foregroundColor(ColorPalette.darkGray)
                 
                 ForEach(viewModel.comments, id: \.self) { comment in
                     
@@ -42,7 +42,7 @@ struct PostCommentsView: View {
                         
                     }
                     .padding()
-                    .background(Color.gray.opacity(0.1))
+                    .background(ColorPalette.lightGray)
                     .cornerRadius(8)
                 }
                 .unredacted(when: viewModel.commentsFetched)

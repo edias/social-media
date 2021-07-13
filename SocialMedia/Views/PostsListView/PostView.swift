@@ -24,7 +24,7 @@ struct PostView: View {
             
             Text("\(post.body.capitalized)")
                 .font(.subheadline)
-                .foregroundColor(Color.black.opacity(0.7))
+                .foregroundColor(ColorPalette.darkGray)
             
             HStack { Spacer() }.padding(.top, 3)
         }
@@ -34,7 +34,7 @@ struct PostView: View {
         .padding(.trailing, 15)
         .onTapGesture { selection = post.id }
         
-        Divider().background(Color.gray.opacity(0.1))
+        Divider().background(ColorPalette.lightGray)
     }
 }
 
