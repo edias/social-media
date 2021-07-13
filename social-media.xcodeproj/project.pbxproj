@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F81C54D0269C287C0064AE9F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54CF269C287C0064AE9F /* NetworkService.swift */; };
+		F81C54D2269C2C310064AE9F /* NetworkStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54D1269C2C310064AE9F /* NetworkStatusHandler.swift */; };
+		F81C54D4269C2C400064AE9F /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54D3269C2C400064AE9F /* Serializer.swift */; };
+		F81C54D8269C2D480064AE9F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54D7269C2D480064AE9F /* Post.swift */; };
+		F81C54DA269C2D640064AE9F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54D9269C2D640064AE9F /* Comment.swift */; };
+		F81C54DD269C2D9D0064AE9F /* PostsNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54DC269C2D9D0064AE9F /* PostsNetworkServices.swift */; };
+		F81C54DF269C2DD30064AE9F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54DE269C2DD30064AE9F /* Environment.swift */; };
 		F87F1D69269C258300E9BB38 /* SocialMediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */; };
 		F87F1D6B269C258300E9BB38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D6A269C258300E9BB38 /* ContentView.swift */; };
 		F87F1D6D269C258500E9BB38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F1D6C269C258500E9BB38 /* Assets.xcassets */; };
@@ -14,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F81C54CF269C287C0064AE9F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F81C54D1269C2C310064AE9F /* NetworkStatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusHandler.swift; sourceTree = "<group>"; };
+		F81C54D3269C2C400064AE9F /* Serializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
+		F81C54D7269C2D480064AE9F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F81C54D9269C2D640064AE9F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		F81C54DC269C2D9D0064AE9F /* PostsNetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkServices.swift; sourceTree = "<group>"; };
+		F81C54DE269C2DD30064AE9F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		F87F1D65269C258300E9BB38 /* social-media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "social-media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaApp.swift; sourceTree = "<group>"; };
 		F87F1D6A269C258300E9BB38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +47,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F81C54CE269C28640064AE9F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F81C54E1269C2E3B0064AE9F /* Base */,
+				F81C54DB269C2D850064AE9F /* Services */,
+				F81C54D5269C2D170064AE9F /* DataModels */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F81C54D5269C2D170064AE9F /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				F81C54D7269C2D480064AE9F /* Post.swift */,
+				F81C54D9269C2D640064AE9F /* Comment.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		F81C54DB269C2D850064AE9F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F81C54DC269C2D9D0064AE9F /* PostsNetworkServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F81C54E0269C2DDB0064AE9F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F81C54DE269C2DD30064AE9F /* Environment.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F81C54E1269C2E3B0064AE9F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F81C54CF269C287C0064AE9F /* NetworkService.swift */,
+				F81C54D1269C2C310064AE9F /* NetworkStatusHandler.swift */,
+				F81C54D3269C2C400064AE9F /* Serializer.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		F87F1D5C269C258300E9BB38 = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +111,8 @@
 		F87F1D67269C258300E9BB38 /* SocialMedia */ = {
 			isa = PBXGroup;
 			children = (
+				F81C54E0269C2DDB0064AE9F /* Settings */,
+				F81C54CE269C28640064AE9F /* Network */,
 				F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */,
 				F87F1D6A269C258300E9BB38 /* ContentView.swift */,
 				F87F1D6C269C258500E9BB38 /* Assets.xcassets */,
@@ -139,7 +200,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F87F1D6B269C258300E9BB38 /* ContentView.swift in Sources */,
+				F81C54DA269C2D640064AE9F /* Comment.swift in Sources */,
+				F81C54D2269C2C310064AE9F /* NetworkStatusHandler.swift in Sources */,
+				F81C54D0269C287C0064AE9F /* NetworkService.swift in Sources */,
+				F81C54DF269C2DD30064AE9F /* Environment.swift in Sources */,
+				F81C54DD269C2D9D0064AE9F /* PostsNetworkServices.swift in Sources */,
+				F81C54D8269C2D480064AE9F /* Post.swift in Sources */,
 				F87F1D69269C258300E9BB38 /* SocialMediaApp.swift in Sources */,
+				F81C54D4269C2C400064AE9F /* Serializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,10 +336,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"social-media/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SocialMedia/Preview Content\"";
 				DEVELOPMENT_TEAM = QJG8TQF365;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "social-media/Info.plist";
+				INFOPLIST_FILE = SocialMedia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,10 +358,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"social-media/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SocialMedia/Preview Content\"";
 				DEVELOPMENT_TEAM = QJG8TQF365;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "social-media/Info.plist";
+				INFOPLIST_FILE = SocialMedia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
