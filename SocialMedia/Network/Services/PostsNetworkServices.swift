@@ -8,10 +8,14 @@
 import Combine
 import Foundation
 
-class PostsNetworkServices: NetworkService {
+protocol PostsFetcher {
+    func fetchPosts() -> AnyPublisher<[Post], Error>
+}
+
+class PostsNetworkServices: PostsFetcher, NetworkService {
     
     var restClient: RestClient { URLSession.shared }
-
+    
     func fetchPosts() -> AnyPublisher<[Post], Error> {
         get(url: "\(Environment.URLS.base)/posts")
     }
