@@ -19,41 +19,50 @@ struct PostCommentsView: View {
     
     var body: some View {
         
-        ScrollView {
-        
-            VStack (alignment: .leading, spacing: 10) {
-                
-                Text("\(post.title.capitalized)")
-                    .font(Font.title3.bold())
-                
-                Text("\(post.body)")
-                    .font(.body)
-                    .foregroundColor(ColorPalette.darkGray)
-                
-                ForEach(viewModel.comments, id: \.self) { comment in
+        VStack {
+            
+            SearchBar(searchText: $viewModel.searchText)
+                .padding(.top, 10)
+            
+            ScrollView {
+            
+                VStack (alignment: .leading, spacing: 10) {
                     
-                    LazyVStack (alignment: .leading, spacing: 5) {
+                    Text("\(post.title.capitalized)")
+                        .font(Font.title3.bold())
+                    
+                    Text("\(post.body)")
+                        .font(.body)
+                        .foregroundColor(ColorPalette.darkGray)
+                    
+                    ForEach(viewModel.comments, id: \.self) { comment in
                         
-                        Text("\(comment.name)")
-                            .font(Font.subheadline.bold())
+                        LazyVStack (alignment: .leading, spacing: 5) {
+                            
+                            Text("\(comment.name)")
+                                .font(Font.subheadline.bold())
 
-                        Text("\(comment.body)")
-                            .font(.subheadline)
-                        
+                            Text("\(comment.body)")
+                                .font(.subheadline)
+                            
+                        }
+                        .padding()
+                        .background(ColorPalette.lightGray)
+                        .cornerRadius(8)
                     }
-                    .padding()
-                    .background(ColorPalette.lightGray)
-                    .cornerRadius(8)
+                    .unredacted(when: viewModel.commentsFetched)
                 }
-                .unredacted(when: viewModel.commentsFetched)
-            }
-            .padding(.top, padding)
-            .padding(.leading, padding)
-            .padding(.trailing, padding)
+                .padding(.top, padding)
+                .padding(.leading, padding)
+                .padding(.trailing, padding)
 
+            }
+            .onAppear { viewModel.fetchComments(post.id) }
+            .navigationBarTitle("Comments", displayMode: .inline)
+
+            
         }
-        .onAppear { viewModel.fetchComments(post.id) }
-        .navigationBarTitle("Comments", displayMode: .inline)
+        
     }
 }
 
