@@ -34,10 +34,10 @@ class PostsListViewModel: ObservableObject {
         
         postsFetcher.fetchPosts()
             .receive(on: RunLoop.main).sink { _ in }
-        receiveValue: { [weak self] newPosts in
-            self?.allPosts = newPosts
+        receiveValue: { [weak self] posts in
+            self?.allPosts = posts
+            self?.posts = posts
             self?.postsFetched = true
-            self?.searchText = ""
         }.store(in: &susbcriptions)
     }
     

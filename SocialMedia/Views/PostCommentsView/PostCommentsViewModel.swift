@@ -36,8 +36,8 @@ class PostCommentsViewModel: ObservableObject {
             .receive(on: RunLoop.main).sink { _ in }
                 receiveValue: { [weak self] comments in
                     self?.allComments = comments
+                    self?.comments = comments
                     self?.commentsFetched = true
-                    self?.searchText = ""
                 }.store(in: &susbcriptions)
     }
     
