@@ -10,20 +10,18 @@ import Foundation
 
 class PostsListViewModel: ObservableObject {
     
+    private var postsFetcher: PostsFetcher
+    private var susbcriptions = Set<AnyCancellable>()
+    private var allPosts: [Post] = []
+    
     @Published
     var searchText = ""
-    
-    private var susbcriptions = Set<AnyCancellable>()
     
     @Published
     private (set) var postsFetched = false
     
-    private var allPosts: [Post] = []
-    
     @Published
     private (set) var posts: [Post] = []
-    
-    private var postsFetcher: PostsFetcher
     
     init(_ postsFetcher: PostsFetcher = PostsNetworkServices()) {
         self.postsFetcher = postsFetcher
