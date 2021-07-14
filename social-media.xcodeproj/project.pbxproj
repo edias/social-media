@@ -23,6 +23,7 @@
 		F89951AF269D9A1600950525 /* PostCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951AE269D9A1600950525 /* PostCommentsView.swift */; };
 		F89951B1269D9A7900950525 /* PostCommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951B0269D9A7900950525 /* PostCommentsViewModel.swift */; };
 		F89951BB269DA83100950525 /* ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951BA269DA83100950525 /* ColorPallete.swift */; };
+		F89951BF269DB1FA00950525 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951BE269DB1FA00950525 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F89951AE269D9A1600950525 /* PostCommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsView.swift; sourceTree = "<group>"; };
 		F89951B0269D9A7900950525 /* PostCommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsViewModel.swift; sourceTree = "<group>"; };
 		F89951BA269DA83100950525 /* ColorPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallete.swift; sourceTree = "<group>"; };
+		F89951BE269DB1FA00950525 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				F87F1D6C269C258500E9BB38 /* Assets.xcassets */,
 				F87F1D71269C258500E9BB38 /* Info.plist */,
 				F87F1D6E269C258500E9BB38 /* Preview Content */,
+				F89951BE269DB1FA00950525 /* SearchBar.swift */,
 			);
 			path = SocialMedia;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			files = (
 				F87F1D6B269C258300E9BB38 /* PostsListView.swift in Sources */,
 				F81C54DA269C2D640064AE9F /* Comment.swift in Sources */,
+				F89951BF269DB1FA00950525 /* SearchBar.swift in Sources */,
 				F81C54D2269C2C310064AE9F /* NetworkStatusHandler.swift in Sources */,
 				F81C54D0269C287C0064AE9F /* NetworkService.swift in Sources */,
 				F89951AF269D9A1600950525 /* PostCommentsView.swift in Sources */,

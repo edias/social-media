@@ -14,25 +14,29 @@ struct PostsListView: View {
     private var viewModel = PostsListViewModel()
     
     @State
-    var selection: Int? = nil
+    private var selection: Int? = nil
     
     var body: some View {
         
         NavigationView {
             
-            ScrollView {
+            VStack {
                 
-                ForEach(viewModel.posts, id: \.self) { post in
-                    
-                    PostView(post: post, selection: $selection)
-                    
-                    NavigationLink(destination: PostCommentsView(post: post),
-                                   tag: post.id,
-                                   selection: $selection) {}
+                SearchBar(searchText: $viewModel.searchText)
+                
+                ScrollView {
+                    ForEach(viewModel.posts, id: \.self) { post in
+                        
+                        PostView(post: post, selection: $selection)
+                        
+                        NavigationLink(destination: PostCommentsView(post: post),
+                                       tag: post.id,
+                                       selection: $selection) {}
+                    }
+                    .listStyle(GroupedListStyle())
+                    .unredacted(when: viewModel.postsFetched)
                 }
-                .unredacted(when: viewModel.postsFetched)
-            }
-            .navigationTitle("Posts")
+            }.navigationTitle("Posts")
         }
         .onAppear { viewModel.fetchPosts() }
         .navigationViewStyle(StackNavigationViewStyle())
