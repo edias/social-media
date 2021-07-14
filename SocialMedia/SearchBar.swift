@@ -24,7 +24,11 @@ struct SearchBar: View {
             .overlay (
                 HStack {
                     Spacer()
-                    Button(action: { self.searchText = "" }) {
+                    Button(action: {
+                        self.searchText = ""
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                                        to: nil, from: nil, for: nil)
+                    }) {
                         Image(systemName: "multiply.circle.fill")
                             .foregroundColor(.gray)
                             .padding(.trailing, 8)
