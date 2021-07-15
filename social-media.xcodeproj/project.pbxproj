@@ -14,6 +14,7 @@
 		F81C54DA269C2D640064AE9F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54D9269C2D640064AE9F /* Comment.swift */; };
 		F81C54DD269C2D9D0064AE9F /* PostsNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54DC269C2D9D0064AE9F /* PostsNetworkServices.swift */; };
 		F81C54DF269C2DD30064AE9F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54DE269C2DD30064AE9F /* Environment.swift */; };
+		F85EF63726A02D7F0007BF9F /* View+Redact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF63626A02D7F0007BF9F /* View+Redact.swift */; };
 		F87F1D69269C258300E9BB38 /* SocialMediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */; };
 		F87F1D6B269C258300E9BB38 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D6A269C258300E9BB38 /* PostsListView.swift */; };
 		F87F1D6D269C258500E9BB38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F1D6C269C258500E9BB38 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		F81C54D9269C2D640064AE9F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F81C54DC269C2D9D0064AE9F /* PostsNetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkServices.swift; sourceTree = "<group>"; };
 		F81C54DE269C2DD30064AE9F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		F85EF63626A02D7F0007BF9F /* View+Redact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Redact.swift"; sourceTree = "<group>"; };
 		F87F1D65269C258300E9BB38 /* social-media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "social-media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaApp.swift; sourceTree = "<group>"; };
 		F87F1D6A269C258300E9BB38 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		F85EF63526A02D650007BF9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F85EF63626A02D7F0007BF9F /* View+Redact.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F87F1D5C269C258300E9BB38 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				F8DC03E026A021FA00713F31 /* Supporting Files */,
+				F85EF63526A02D650007BF9F /* Extensions */,
 				F89951B9269DA82800950525 /* Shared */,
 				F89951AD269D8FB800950525 /* Views */,
 				F81C54E0269C2DDB0064AE9F /* Settings */,
@@ -274,6 +285,7 @@
 				F89951BF269DB1FA00950525 /* SearchBar.swift in Sources */,
 				F81C54D2269C2C310064AE9F /* NetworkStatusHandler.swift in Sources */,
 				F81C54D0269C287C0064AE9F /* NetworkService.swift in Sources */,
+				F85EF63726A02D7F0007BF9F /* View+Redact.swift in Sources */,
 				F89951AF269D9A1600950525 /* PostCommentsView.swift in Sources */,
 				F81C54DF269C2DD30064AE9F /* Environment.swift in Sources */,
 				F81C54DD269C2D9D0064AE9F /* PostsNetworkServices.swift in Sources */,

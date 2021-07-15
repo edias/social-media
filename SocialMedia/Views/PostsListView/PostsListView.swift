@@ -48,15 +48,3 @@ struct ContentView_Previews: PreviewProvider {
         PostsListView()
     }
 }
-
-extension View {
-    
-    @ViewBuilder
-    func unredacted(when condition: Bool) -> some View {
-        if condition {
-            unredacted()
-        } else {
-            redacted(reason: .placeholder)
-        }
-    }
-}
