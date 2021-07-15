@@ -30,10 +30,11 @@ struct PostCommentsView: View {
                     
                     Text("\(post.title.capitalized)")
                         .font(Font.title3.bold())
+                        .foregroundColor(ColorPalette.primaryGray)
                     
                     Text("\(post.body)")
                         .font(.body)
-                        .foregroundColor(ColorPalette.darkGray)
+                        .foregroundColor(ColorPalette.secondaryGray)
                     
                     ForEach(viewModel.comments, id: \.self) { comment in
                         
@@ -44,10 +45,11 @@ struct PostCommentsView: View {
 
                             Text("\(comment.body)")
                                 .font(.subheadline)
+                                .foregroundColor(ColorPalette.primaryGray)
                             
                         }
                         .padding()
-                        .background(ColorPalette.lightGray)
+                        .background(ColorPalette.secondaryGray.opacity(0.2))
                         .cornerRadius(8)
                     }
                     .unredacted(when: viewModel.commentsFetched)

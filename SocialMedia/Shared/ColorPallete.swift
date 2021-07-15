@@ -8,6 +8,6 @@
 import SwiftUI
 
 enum ColorPalette {
-    static let darkGray  = Color.black.opacity(0.7)
-    static let lightGray = Color.gray.opacity(0.1)
+    static let primaryGray  = Color("PrimaryGray")
+    static let secondaryGray = Color("SecondaryGray")
 }

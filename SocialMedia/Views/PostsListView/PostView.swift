@@ -21,12 +21,14 @@ struct PostView: View {
             Text("\(post.title.capitalized)")
                 .lineLimit(2)
                 .font(Font.callout.bold())
+                .foregroundColor(ColorPalette.primaryGray)
             
             Text("\(post.body.capitalized)")
                 .font(.subheadline)
-                .foregroundColor(ColorPalette.darkGray)
+                .foregroundColor(ColorPalette.secondaryGray)
+                .padding(.bottom, 20)
             
-            HStack { Spacer() }.padding(.top, 3)
+            Divider().background(ColorPalette.secondaryGray)
         }
         .padding(.top, 10)
         .padding(.bottom, 0)
@@ -34,14 +36,21 @@ struct PostView: View {
         .padding(.trailing, 15)
         .onTapGesture { selection = post.id }
         
-        Divider().background(ColorPalette.lightGray)
     }
 }
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        let post = Post(id: 0, title: "Title", body: "Body")
-        PostView(post: post, selection: .constant(0)).previewLayout(.sizeThatFits)
-            .padding()
+        Group {
+            let post = Post(id: 0, title: "Title", body: "Body")
+            PostView(post: post, selection: .constant(0))
+                .previewLayout(.fixed(width: 400, height: 100))
+                .preferredColorScheme(.dark)
+                .previewDisplayName("Dark Mode")
+            
+            PostView(post: post, selection: .constant(0))
+                .previewLayout(.fixed(width: 400, height: 100))
+                .previewDisplayName("Light Mode")
+        }
     }
 }
