@@ -68,6 +68,7 @@ struct PostCommentsView: View {
 
 struct PostCommentsView_Previews: PreviewProvider {
     static var previews: some View {
-        PostCommentsView(post: Post(id: 1, title: "Title", body: "Body"))
+        PostCommentsView(post: Post(id: 1, title: "Title", body: "Body")).previewLayout(.fixed(width: 400, height: 300))
+            .padding()
     }
 }
