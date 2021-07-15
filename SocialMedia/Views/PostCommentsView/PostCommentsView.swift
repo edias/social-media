@@ -59,12 +59,10 @@ struct PostCommentsView: View {
                 .padding(.trailing, padding)
 
             }
-            .onAppear { viewModel.fetchComments(post.id) }
             .navigationBarTitle("Comments", displayMode: .inline)
-
-            
         }
-        
+        .onAppear { viewModel.fetchComments(post.id) }
+        .errorView(viewModel.errorType, retryAction: { viewModel.fetchComments(post.id) })
     }
 }
 

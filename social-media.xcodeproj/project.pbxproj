@@ -14,7 +14,8 @@
 		F81C54DA269C2D640064AE9F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54D9269C2D640064AE9F /* Comment.swift */; };
 		F81C54DD269C2D9D0064AE9F /* PostsNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54DC269C2D9D0064AE9F /* PostsNetworkServices.swift */; };
 		F81C54DF269C2DD30064AE9F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54DE269C2DD30064AE9F /* Environment.swift */; };
-		F85EF63726A02D7F0007BF9F /* View+Redact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF63626A02D7F0007BF9F /* View+Redact.swift */; };
+		F85EF63726A02D7F0007BF9F /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF63626A02D7F0007BF9F /* View+Utils.swift */; };
+		F85EF63926A054440007BF9F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF63826A054440007BF9F /* ErrorView.swift */; };
 		F87F1D69269C258300E9BB38 /* SocialMediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */; };
 		F87F1D6B269C258300E9BB38 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D6A269C258300E9BB38 /* PostsListView.swift */; };
 		F87F1D6D269C258500E9BB38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F1D6C269C258500E9BB38 /* Assets.xcassets */; };
@@ -36,7 +37,8 @@
 		F81C54D9269C2D640064AE9F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F81C54DC269C2D9D0064AE9F /* PostsNetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkServices.swift; sourceTree = "<group>"; };
 		F81C54DE269C2DD30064AE9F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		F85EF63626A02D7F0007BF9F /* View+Redact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Redact.swift"; sourceTree = "<group>"; };
+		F85EF63626A02D7F0007BF9F /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
+		F85EF63826A054440007BF9F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		F87F1D65269C258300E9BB38 /* social-media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "social-media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaApp.swift; sourceTree = "<group>"; };
 		F87F1D6A269C258300E9BB38 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
@@ -111,7 +113,7 @@
 		F85EF63526A02D650007BF9F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F85EF63626A02D7F0007BF9F /* View+Redact.swift */,
+				F85EF63626A02D7F0007BF9F /* View+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -161,6 +163,7 @@
 				F8DC03E126A0266C00713F31 /* SearchBar */,
 				F89951B3269D9D5400950525 /* PostCommentsView */,
 				F89951B2269D9D4800950525 /* PostsListView */,
+				F85EF63826A054440007BF9F /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,8 +287,9 @@
 				F81C54DA269C2D640064AE9F /* Comment.swift in Sources */,
 				F89951BF269DB1FA00950525 /* SearchBar.swift in Sources */,
 				F81C54D2269C2C310064AE9F /* NetworkStatusHandler.swift in Sources */,
+				F85EF63926A054440007BF9F /* ErrorView.swift in Sources */,
 				F81C54D0269C287C0064AE9F /* NetworkService.swift in Sources */,
-				F85EF63726A02D7F0007BF9F /* View+Redact.swift in Sources */,
+				F85EF63726A02D7F0007BF9F /* View+Utils.swift in Sources */,
 				F89951AF269D9A1600950525 /* PostCommentsView.swift in Sources */,
 				F81C54DF269C2DD30064AE9F /* Environment.swift in Sources */,
 				F81C54DD269C2D9D0064AE9F /* PostsNetworkServices.swift in Sources */,
@@ -423,9 +427,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SocialMedia/Preview Content\"";
-				DEVELOPMENT_TEAM = QJG8TQF365;
+				DEVELOPMENT_TEAM = DW4ZNXNDJB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SocialMedia/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -433,8 +438,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "immersia.com.au.social-media";
+				PRODUCT_BUNDLE_IDENTIFIER = immersia.com.au.SocialMedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -445,9 +451,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SocialMedia/Preview Content\"";
-				DEVELOPMENT_TEAM = QJG8TQF365;
+				DEVELOPMENT_TEAM = DW4ZNXNDJB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SocialMedia/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -455,8 +462,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "immersia.com.au.social-media";
+				PRODUCT_BUNDLE_IDENTIFIER = immersia.com.au.SocialMedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

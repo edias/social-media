@@ -11,6 +11,9 @@ import Foundation
 class PostsListViewModel: ObservableObject {
     
     @Published
+    var errorType: ErrorType?
+    
+    @Published
     var searchText = ""
     
     @Published
@@ -30,11 +33,13 @@ class PostsListViewModel: ObservableObject {
     
     func fetchPosts() {
         
+        errorType = nil
+        
         initializePlaceHolders()
         
-        postsFetcher.fetchPosts()
-            .receive(on: RunLoop.main).sink { _ in }
-        receiveValue: { [weak self] posts in
+        postsFetcher.fetchPosts().receive(on: RunLoop.main).sink { [weak self] error in
+            self?.handleError(error)
+        } receiveValue: { [weak self] posts in
             self?.allPosts = posts
             self?.posts = posts
             self?.postsFetched = true
@@ -57,11 +62,21 @@ class PostsListViewModel: ObservableObject {
                 }
             }).store(in: &susbcriptions)
     }
-    
+        
     private func initializePlaceHolders() {
-            postsFetched = false
-            posts = (0...11).map { Post(id: $0,
-                                        title: "Placeholder",
-                                        body: "Alias alias cumque. Voluptatem ipsa repudiandae ipsum reiciendis illo. Incidunt rerum id architecto doloribus." ) }
+        postsFetched = false
+        posts = (0...11).map { Post(id: $0,
+                                    title: "Placeholder",
+                                    body: "Alias alias cumque. Voluptatem ipsa repudiandae ipsum reiciendis illo. Incidunt rerum id architecto doloribus." ) }
+    }
+    
+    private func handleError(_ error: Subscribers.Completion<Error>) {
+        switch error {
+            case .failure(let error as NSError) where error.code == NSURLErrorNotConnectedToInternet:
+                errorType = .offline
+            case .failure:
+                errorType = .generic
+            default: break
         }
+    }
 }

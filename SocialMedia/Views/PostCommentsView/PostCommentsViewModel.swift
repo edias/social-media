@@ -11,6 +11,9 @@ import Foundation
 class PostCommentsViewModel: ObservableObject {
     
     @Published
+    var errorType: ErrorType?
+    
+    @Published
     var searchText = ""
     
     @Published
@@ -30,15 +33,17 @@ class PostCommentsViewModel: ObservableObject {
     
     func fetchComments(_ postId: Int) {
         
+        errorType = nil
+        
         initializePlaceHolders()
         
-        postsFetcher.fetchCommentsFromPost(postId)
-            .receive(on: RunLoop.main).sink { _ in }
-                receiveValue: { [weak self] comments in
-                    self?.allComments = comments
-                    self?.comments = comments
-                    self?.commentsFetched = true
-                }.store(in: &susbcriptions)
+        postsFetcher.fetchCommentsFromPost(postId).receive(on: RunLoop.main).sink { [weak self] error in
+            self?.handleError(error)
+        } receiveValue: { [weak self] comments in
+            self?.allComments = comments
+            self?.comments = comments
+            self?.commentsFetched = true
+        }.store(in: &susbcriptions)
     }
     
     private func setupSearchSubscription() {
@@ -67,6 +72,16 @@ class PostCommentsViewModel: ObservableObject {
             Comment(name: "Placeholder",
                     email: "yturner@hotmail.com",
                     body: "Alias alias cumque. Voluptatem ipsa repudiandae ipsum reiciendis illo. Incidunt rerum id architecto doloribus." )
+        }
+    }
+    
+    private func handleError(_ error: Subscribers.Completion<Error>) {
+        switch error {
+            case .failure(let error as NSError) where error.code == NSURLErrorNotConnectedToInternet:
+                errorType = .offline
+            case .failure:
+                errorType = .generic
+            default: break
         }
     }
 }

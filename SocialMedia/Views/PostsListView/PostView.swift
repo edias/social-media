@@ -35,7 +35,6 @@ struct PostView: View {
         .padding(.leading, 15)
         .padding(.trailing, 15)
         .onTapGesture { selection = post.id }
-        
     }
 }
 
