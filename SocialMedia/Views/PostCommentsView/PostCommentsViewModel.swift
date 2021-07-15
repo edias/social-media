@@ -33,8 +33,6 @@ class PostCommentsViewModel: ObservableObject {
     
     func fetchComments(_ postId: Int) {
         
-        errorType = nil
-        
         initializePlaceHolders()
         
         postsFetcher.fetchCommentsFromPost(postId).receive(on: RunLoop.main).sink { [weak self] error in
@@ -81,7 +79,8 @@ class PostCommentsViewModel: ObservableObject {
                 errorType = .offline
             case .failure:
                 errorType = .generic
-            default: break
+            default:
+                errorType = nil
         }
     }
 }

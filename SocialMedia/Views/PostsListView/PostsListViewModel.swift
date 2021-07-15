@@ -33,8 +33,6 @@ class PostsListViewModel: ObservableObject {
     
     func fetchPosts() {
         
-        errorType = nil
-        
         initializePlaceHolders()
         
         postsFetcher.fetchPosts().receive(on: RunLoop.main).sink { [weak self] error in
@@ -76,7 +74,8 @@ class PostsListViewModel: ObservableObject {
                 errorType = .offline
             case .failure:
                 errorType = .generic
-            default: break
+            default:
+                errorType = nil
         }
     }
 }
