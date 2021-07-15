@@ -33,10 +33,7 @@ class PostsListViewModel: ObservableObject {
         initializePlaceHolders()
         
         postsFetcher.fetchPosts()
-            .receive(on: RunLoop.main).sink { error in
-                guard case .failure(let error) = error else { return }
-                print(error)
-            }
+            .receive(on: RunLoop.main).sink { _ in }
         receiveValue: { [weak self] posts in
             self?.allPosts = posts
             self?.posts = posts
