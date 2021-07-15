@@ -130,9 +130,8 @@
 				F89951AD269D8FB800950525 /* Views */,
 				F81C54E0269C2DDB0064AE9F /* Settings */,
 				F81C54CE269C28640064AE9F /* Network */,
-				F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */,
 				F87F1D6E269C258500E9BB38 /* Preview Content */,
-				F89951BE269DB1FA00950525 /* SearchBar.swift */,
+				F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */,
 			);
 			path = SocialMedia;
 			sourceTree = "<group>";
@@ -148,6 +147,7 @@
 		F89951AD269D8FB800950525 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F8DC03E126A0266C00713F31 /* SearchBar */,
 				F89951B3269D9D5400950525 /* PostCommentsView */,
 				F89951B2269D9D4800950525 /* PostsListView */,
 			);
@@ -189,6 +189,14 @@
 				F8DC03DE26A01CB300713F31 /* Launch Screen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8DC03E126A0266C00713F31 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				F89951BE269DB1FA00950525 /* SearchBar.swift */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,7 +415,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SocialMedia/Preview Content\"";
 				DEVELOPMENT_TEAM = QJG8TQF365;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SocialMedia/Info.plist;
+				INFOPLIST_FILE = "SocialMedia/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -429,7 +437,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SocialMedia/Preview Content\"";
 				DEVELOPMENT_TEAM = QJG8TQF365;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SocialMedia/Info.plist;
+				INFOPLIST_FILE = "SocialMedia/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
