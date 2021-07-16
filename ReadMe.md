@@ -1,10 +1,10 @@
 # Social media
 
-A small and very simple app that displays a list of posts and comments. All posts and comments can be searched by title or body content/
+A small and very simple app that displays a list of posts and comments. All posts and comments can be searched by title or body content.
 
 ## Getting Started
 
-Just download the project on the following URL https://github.com/edias/social-media/archive/refs/heads/main.zip and unzip the file/
+Just download the project on the following URL https://github.com/edias/social-media/archive/refs/heads/main.zip and unzip the file.
 
 ### Prerequisites
 
@@ -16,11 +16,11 @@ Open social-media and run the project on a device or simulator.
 
 ### Theming
 
-Support Dark and Light mode
+Support Dark and Light mode.
 
 ## Scenarios
 
-These are three possible scenarios/
+These are three possible scenarios.
 
 ### Success Scenario
 
