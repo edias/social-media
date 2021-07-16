@@ -34,13 +34,13 @@ struct PostsListView: View {
                                        selection: $selection) {}
                     }
                     .listStyle(GroupedListStyle())
-                    .unredacted(when: viewModel.postsFetched)
+                    .unredacted(when: viewModel.postsLoaded)
                 }
             }.navigationTitle("Posts")
         }
-        .onAppear { viewModel.fetchPosts() }
+        .onAppear { viewModel.loadPosts() }
         .navigationViewStyle(StackNavigationViewStyle())
-        .errorView(viewModel.errorType, retryAction: { viewModel.fetchPosts() })
+        .errorView(viewModel.errorType, retryAction: { viewModel.loadPosts() })
     }
 }
 

@@ -17,7 +17,7 @@ class PostsListViewModel: ObservableObject {
     var searchText = ""
     
     @Published
-    private (set) var postsFetched = false
+    private (set) var postsLoaded = false
     
     @Published
     private (set) var posts: [Post] = []
@@ -26,7 +26,7 @@ class PostsListViewModel: ObservableObject {
     private var susbcriptions = Set<AnyCancellable>()
     private var allPosts: [Post] = [] {
         didSet {
-            postsFetched = true
+            postsLoaded = true
         }
     }
     
@@ -35,7 +35,7 @@ class PostsListViewModel: ObservableObject {
         setupSearchSubscription()
     }
     
-    func fetchPosts() {
+    func loadPosts() {
         
         initializePlaceHolders()
         
@@ -65,7 +65,7 @@ class PostsListViewModel: ObservableObject {
     }
         
     private func initializePlaceHolders() {
-        postsFetched = false
+        postsLoaded = false
         posts = MockBuilder.makePosts()
     }
     

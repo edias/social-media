@@ -52,7 +52,7 @@ struct PostCommentsView: View {
                         .background(ColorPalette.secondaryGray.opacity(0.2))
                         .cornerRadius(8)
                     }
-                    .unredacted(when: viewModel.commentsFetched)
+                    .unredacted(when: viewModel.commentsLoaded)
                 }
                 .padding(.top, padding)
                 .padding(.leading, padding)
@@ -61,8 +61,8 @@ struct PostCommentsView: View {
             }
             .navigationBarTitle("Comments", displayMode: .inline)
         }
-        .onAppear { viewModel.fetchComments(post.id) }
-        .errorView(viewModel.errorType, retryAction: { viewModel.fetchComments(post.id) })
+        .onAppear { viewModel.loadComments(post.id) }
+        .errorView(viewModel.errorType, retryAction: { viewModel.loadComments(post.id) })
     }
 }
 

@@ -17,7 +17,7 @@ class PostCommentsViewModel: ObservableObject {
     var searchText = ""
     
     @Published
-    private (set) var commentsFetched = false
+    private (set) var commentsLoaded = false
     
     @Published
     private (set) var comments: [Comment] = []
@@ -26,7 +26,7 @@ class PostCommentsViewModel: ObservableObject {
     private var postsFetcher: PostsFetcher
     private var allComments: [Comment] = [] {
         didSet {
-            commentsFetched = true
+            commentsLoaded = true
         }
     }
     
@@ -35,7 +35,7 @@ class PostCommentsViewModel: ObservableObject {
         setupSearchSubscription()
     }
     
-    func fetchComments(_ postId: Int) {
+    func loadComments(_ postId: Int) {
         
         initializePlaceHolders()
         
@@ -66,7 +66,7 @@ class PostCommentsViewModel: ObservableObject {
 
     
     private func initializePlaceHolders() {
-        commentsFetched = false
+        commentsLoaded = false
         comments = MockBuilder.makeComments()
     }
     
