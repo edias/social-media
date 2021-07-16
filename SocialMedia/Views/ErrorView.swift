@@ -49,10 +49,11 @@ struct ErrorView: View {
             Button("Try again") {
                 retryAction()
             }
+            .foregroundColor(ColorPalette.ascentContrastColor)
             .padding(.vertical, 12)
             .padding(.horizontal, 30)
             .font(.subheadline.weight(.bold))
-            .background(Color.red)
+            .background(ColorPalette.ascentColor)
             .cornerRadius(35)
             .foregroundColor(Color.white)
             .padding(.bottom, 20)
@@ -64,5 +65,6 @@ struct ErrorView: View {
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
         ErrorView(.generic, retryAction: {})
+            .previewDisplayName("Dark Mode")
     }
 }
