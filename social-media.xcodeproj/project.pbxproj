@@ -16,6 +16,7 @@
 		F81C54DF269C2DD30064AE9F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54DE269C2DD30064AE9F /* Environment.swift */; };
 		F85EF63726A02D7F0007BF9F /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF63626A02D7F0007BF9F /* View+Utils.swift */; };
 		F85EF63926A054440007BF9F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF63826A054440007BF9F /* ErrorView.swift */; };
+		F85EF64F26A149670007BF9F /* MockBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF64E26A149670007BF9F /* MockBuilder.swift */; };
 		F87F1D69269C258300E9BB38 /* SocialMediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */; };
 		F87F1D6B269C258300E9BB38 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D6A269C258300E9BB38 /* PostsListView.swift */; };
 		F87F1D6D269C258500E9BB38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F1D6C269C258500E9BB38 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		F81C54DE269C2DD30064AE9F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		F85EF63626A02D7F0007BF9F /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
 		F85EF63826A054440007BF9F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		F85EF64E26A149670007BF9F /* MockBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBuilder.swift; sourceTree = "<group>"; };
 		F87F1D65269C258300E9BB38 /* social-media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "social-media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaApp.swift; sourceTree = "<group>"; };
 		F87F1D6A269C258300E9BB38 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				F89951BA269DA83100950525 /* ColorPallete.swift */,
+				F85EF64E26A149670007BF9F /* MockBuilder.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				F81C54DF269C2DD30064AE9F /* Environment.swift in Sources */,
 				F81C54DD269C2D9D0064AE9F /* PostsNetworkServices.swift in Sources */,
 				F89951BB269DA83100950525 /* ColorPallete.swift in Sources */,
+				F85EF64F26A149670007BF9F /* MockBuilder.swift in Sources */,
 				F89951AA269D8F4E00950525 /* PostsListViewModel.swift in Sources */,
 				F81C54D8269C2D480064AE9F /* Post.swift in Sources */,
 				F87F1D69269C258300E9BB38 /* SocialMediaApp.swift in Sources */,

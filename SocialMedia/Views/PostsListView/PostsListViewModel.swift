@@ -63,9 +63,7 @@ class PostsListViewModel: ObservableObject {
         
     private func initializePlaceHolders() {
         postsFetched = false
-        posts = (0...11).map { Post(id: $0,
-                                    title: "Placeholder",
-                                    body: "Alias alias cumque. Voluptatem ipsa repudiandae ipsum reiciendis illo. Incidunt rerum id architecto doloribus." ) }
+        posts = MockBuilder.makePosts()
     }
     
     private func handleError(_ error: Subscribers.Completion<Error>) {

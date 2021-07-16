@@ -63,14 +63,8 @@ class PostCommentsViewModel: ObservableObject {
 
     
     private func initializePlaceHolders() {
-        
         commentsFetched = false
-        
-        comments = (0...11).map { _ -> Comment in
-            Comment(name: "Placeholder",
-                    email: "yturner@hotmail.com",
-                    body: "Alias alias cumque. Voluptatem ipsa repudiandae ipsum reiciendis illo. Incidunt rerum id architecto doloribus." )
-        }
+        comments = MockBuilder.makeComments()
     }
     
     private func handleError(_ error: Subscribers.Completion<Error>) {
