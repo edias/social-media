@@ -24,7 +24,11 @@ class PostsListViewModel: ObservableObject {
     
     private var postsFetcher: PostsFetcher
     private var susbcriptions = Set<AnyCancellable>()
-    private var allPosts: [Post] = []
+    private var allPosts: [Post] = [] {
+        didSet {
+            postsFetched = true
+        }
+    }
     
     init(_ postsFetcher: PostsFetcher = PostsNetworkServices()) {
         self.postsFetcher = postsFetcher
@@ -40,7 +44,6 @@ class PostsListViewModel: ObservableObject {
         } receiveValue: { [weak self] posts in
             self?.allPosts = posts
             self?.posts = posts
-            self?.postsFetched = true
         }.store(in: &susbcriptions)
     }
     

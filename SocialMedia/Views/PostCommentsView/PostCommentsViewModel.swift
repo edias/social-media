@@ -24,7 +24,11 @@ class PostCommentsViewModel: ObservableObject {
     
     private var susbcriptions = Set<AnyCancellable>()
     private var postsFetcher: PostsFetcher
-    private var allComments: [Comment] = []
+    private var allComments: [Comment] = [] {
+        didSet {
+            commentsFetched = true
+        }
+    }
     
     init(_ postsFetcher: PostsFetcher = PostsNetworkServices()) {
         self.postsFetcher = postsFetcher
@@ -40,7 +44,6 @@ class PostCommentsViewModel: ObservableObject {
         } receiveValue: { [weak self] comments in
             self?.allComments = comments
             self?.comments = comments
-            self?.commentsFetched = true
         }.store(in: &susbcriptions)
     }
     
