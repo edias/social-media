@@ -24,6 +24,7 @@
 		F87F1D6B269C258300E9BB38 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D6A269C258300E9BB38 /* PostsListView.swift */; };
 		F87F1D6D269C258500E9BB38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F1D6C269C258500E9BB38 /* Assets.xcassets */; };
 		F87F1D70269C258500E9BB38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F1D6F269C258500E9BB38 /* Preview Assets.xcassets */; };
+		F8936D1D26A181DB005AB610 /* CommentsNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8936D1C26A181DB005AB610 /* CommentsNetworkServiceTests.swift */; };
 		F89951AA269D8F4E00950525 /* PostsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951A9269D8F4E00950525 /* PostsListViewModel.swift */; };
 		F89951AC269D8F9100950525 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951AB269D8F9100950525 /* PostView.swift */; };
 		F89951AF269D9A1600950525 /* PostCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89951AE269D9A1600950525 /* PostCommentsView.swift */; };
@@ -65,6 +66,7 @@
 		F87F1D6C269C258500E9BB38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F87F1D6F269C258500E9BB38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F87F1D71269C258500E9BB38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8936D1C26A181DB005AB610 /* CommentsNetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsNetworkServiceTests.swift; sourceTree = "<group>"; };
 		F89951A9269D8F4E00950525 /* PostsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewModel.swift; sourceTree = "<group>"; };
 		F89951AB269D8F9100950525 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		F89951AE269D9A1600950525 /* PostCommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				F85EF65026A16F330007BF9F /* Mocks */,
 				F85EF64826A10ED80007BF9F /* PostsNetworkServicesTests.swift */,
 				F85EF64226A10E9A0007BF9F /* Info.plist */,
+				F8936D1C26A181DB005AB610 /* CommentsNetworkServiceTests.swift */,
 			);
 			path = SocialMediaTests;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8936D1D26A181DB005AB610 /* CommentsNetworkServiceTests.swift in Sources */,
 				F85EF65226A16F520007BF9F /* MockRestClient.swift in Sources */,
 				F85EF64926A10ED80007BF9F /* PostsNetworkServicesTests.swift in Sources */,
 				F85EF65426A16F6D0007BF9F /* MockPostsNetworkServices.swift in Sources */,
