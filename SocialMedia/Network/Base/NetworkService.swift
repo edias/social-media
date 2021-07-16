@@ -8,38 +8,45 @@
 import Combine
 import Foundation
 
-extension URLSession: RestClient {}
+typealias RequestResult = (data: Data, response: URLResponse)
+
+extension URLSession: RestClient {
+    func performRequest(_ request: URLRequest) -> AnyPublisher<RequestResult, URLError> {
+        URLSession.shared.dataTaskPublisher(for: request).eraseToAnyPublisher()
+    }
+}
+
+protocol RestClient {
+    func performRequest(_ request: URLRequest) -> AnyPublisher<RequestResult, URLError>
+}
 
 enum NetworkServiceError: Error {
     case invalidURL
 }
 
-protocol RestClient {
-    func dataTaskPublisher(for request: URLRequest) -> URLSession.DataTaskPublisher
-}
-
-protocol RestService {
+protocol NetworkService {
     var restClient: RestClient { get }
-}
-
-protocol NetworkService: RestService {
-    func get<ResultData: Decodable>(url: String) -> AnyPublisher<ResultData, Error>
+    func get<T: Decodable>(url: String) -> AnyPublisher<T, Error>
 }
 
 extension NetworkService {
     
-    func get<ResultData: Decodable>(url: String) -> AnyPublisher<ResultData, Error> {
+    func get<T: Decodable>(url: String) -> AnyPublisher<T, Error> {
         
         guard let url = URL(string: url) else {
-            return Fail<ResultData, Error>(error: NetworkServiceError.invalidURL).eraseToAnyPublisher()
+            return Fail<T, Error>(error: NetworkServiceError.invalidURL).eraseToAnyPublisher()
         }
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        return restClient.dataTaskPublisher(for: request)
-            .tryMap { output in try NetworkStatusHandler.handleOutput(output).data }
-            .tryMap { output in try Serializer.shared.deserialize(ResultData.self, data: output) }
-            .eraseToAnyPublisher()
+        return restClient.performRequest(request)
+                   .tryMap { output in try NetworkStatusHandler.handleOutput(output).data }
+                   .tryMap { output in try Serializer.shared.deserialize(T.self, data: output) }
+                   .eraseToAnyPublisher()
     }
+}
+
+class BaseNetworkService: NetworkService {
+    var restClient: RestClient { URLSession.shared }
 }

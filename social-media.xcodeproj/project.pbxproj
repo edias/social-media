@@ -16,7 +16,10 @@
 		F81C54DF269C2DD30064AE9F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C54DE269C2DD30064AE9F /* Environment.swift */; };
 		F85EF63726A02D7F0007BF9F /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF63626A02D7F0007BF9F /* View+Utils.swift */; };
 		F85EF63926A054440007BF9F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF63826A054440007BF9F /* ErrorView.swift */; };
+		F85EF64926A10ED80007BF9F /* PostsNetworkServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF64826A10ED80007BF9F /* PostsNetworkServicesTests.swift */; };
 		F85EF64F26A149670007BF9F /* MockBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF64E26A149670007BF9F /* MockBuilder.swift */; };
+		F85EF65226A16F520007BF9F /* MockRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF65126A16F520007BF9F /* MockRestClient.swift */; };
+		F85EF65426A16F6D0007BF9F /* MockPostsNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EF65326A16F6D0007BF9F /* MockPostsNetworkServices.swift */; };
 		F87F1D69269C258300E9BB38 /* SocialMediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */; };
 		F87F1D6B269C258300E9BB38 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1D6A269C258300E9BB38 /* PostsListView.swift */; };
 		F87F1D6D269C258500E9BB38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F1D6C269C258500E9BB38 /* Assets.xcassets */; };
@@ -30,6 +33,16 @@
 		F8DC03DF26A01CB300713F31 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8DC03DE26A01CB300713F31 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F85EF64326A10E9A0007BF9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F87F1D5D269C258300E9BB38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F87F1D64269C258300E9BB38;
+			remoteInfo = "social-media";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		F81C54CF269C287C0064AE9F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F81C54D1269C2C310064AE9F /* NetworkStatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusHandler.swift; sourceTree = "<group>"; };
@@ -40,7 +53,12 @@
 		F81C54DE269C2DD30064AE9F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		F85EF63626A02D7F0007BF9F /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
 		F85EF63826A054440007BF9F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		F85EF63E26A10E9A0007BF9F /* SocialMediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85EF64226A10E9A0007BF9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F85EF64826A10ED80007BF9F /* PostsNetworkServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkServicesTests.swift; sourceTree = "<group>"; };
 		F85EF64E26A149670007BF9F /* MockBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBuilder.swift; sourceTree = "<group>"; };
+		F85EF65126A16F520007BF9F /* MockRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestClient.swift; sourceTree = "<group>"; };
+		F85EF65326A16F6D0007BF9F /* MockPostsNetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostsNetworkServices.swift; sourceTree = "<group>"; };
 		F87F1D65269C258300E9BB38 /* social-media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "social-media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F1D68269C258300E9BB38 /* SocialMediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaApp.swift; sourceTree = "<group>"; };
 		F87F1D6A269C258300E9BB38 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
@@ -57,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F85EF63B26A10E9A0007BF9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F87F1D62269C258300E9BB38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -120,10 +145,30 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F85EF63F26A10E9A0007BF9F /* SocialMediaTests */ = {
+			isa = PBXGroup;
+			children = (
+				F85EF65026A16F330007BF9F /* Mocks */,
+				F85EF64826A10ED80007BF9F /* PostsNetworkServicesTests.swift */,
+				F85EF64226A10E9A0007BF9F /* Info.plist */,
+			);
+			path = SocialMediaTests;
+			sourceTree = "<group>";
+		};
+		F85EF65026A16F330007BF9F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F85EF65126A16F520007BF9F /* MockRestClient.swift */,
+				F85EF65326A16F6D0007BF9F /* MockPostsNetworkServices.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		F87F1D5C269C258300E9BB38 = {
 			isa = PBXGroup;
 			children = (
 				F87F1D67269C258300E9BB38 /* SocialMedia */,
+				F85EF63F26A10E9A0007BF9F /* SocialMediaTests */,
 				F87F1D66269C258300E9BB38 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				F87F1D65269C258300E9BB38 /* social-media.app */,
+				F85EF63E26A10E9A0007BF9F /* SocialMediaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +265,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F85EF63D26A10E9A0007BF9F /* SocialMediaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85EF64526A10E9A0007BF9F /* Build configuration list for PBXNativeTarget "SocialMediaTests" */;
+			buildPhases = (
+				F85EF63A26A10E9A0007BF9F /* Sources */,
+				F85EF63B26A10E9A0007BF9F /* Frameworks */,
+				F85EF63C26A10E9A0007BF9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F85EF64426A10E9A0007BF9F /* PBXTargetDependency */,
+			);
+			name = SocialMediaTests;
+			productName = SocialMediaTests;
+			productReference = F85EF63E26A10E9A0007BF9F /* SocialMediaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F87F1D64269C258300E9BB38 /* social-media */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F87F1D74269C258500E9BB38 /* Build configuration list for PBXNativeTarget "social-media" */;
@@ -245,6 +309,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					F85EF63D26A10E9A0007BF9F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F87F1D64269C258300E9BB38;
+					};
 					F87F1D64269C258300E9BB38 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -264,11 +332,19 @@
 			projectRoot = "";
 			targets = (
 				F87F1D64269C258300E9BB38 /* social-media */,
+				F85EF63D26A10E9A0007BF9F /* SocialMediaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F85EF63C26A10E9A0007BF9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F87F1D63269C258300E9BB38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,6 +358,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F85EF63A26A10E9A0007BF9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85EF65226A16F520007BF9F /* MockRestClient.swift in Sources */,
+				F85EF64926A10ED80007BF9F /* PostsNetworkServicesTests.swift in Sources */,
+				F85EF65426A16F6D0007BF9F /* MockPostsNetworkServices.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F87F1D61269C258300E9BB38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,7 +395,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F85EF64426A10E9A0007BF9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F87F1D64269C258300E9BB38 /* social-media */;
+			targetProxy = F85EF64326A10E9A0007BF9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		F85EF64626A10E9A0007BF9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SocialMediaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = immersia.com.au.SocialMediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/social-media.app/social-media";
+			};
+			name = Debug;
+		};
+		F85EF64726A10E9A0007BF9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SocialMediaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = immersia.com.au.SocialMediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/social-media.app/social-media";
+			};
+			name = Release;
+		};
 		F87F1D72269C258500E9BB38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,6 +611,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F85EF64526A10E9A0007BF9F /* Build configuration list for PBXNativeTarget "SocialMediaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85EF64626A10E9A0007BF9F /* Debug */,
+				F85EF64726A10E9A0007BF9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F87F1D60269C258300E9BB38 /* Build configuration list for PBXProject "social-media" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

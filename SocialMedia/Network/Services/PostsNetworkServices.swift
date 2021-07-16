@@ -13,9 +13,7 @@ protocol PostsFetcher {
     func fetchCommentsFromPost(_ id: Int) -> AnyPublisher<[Comment], Error> 
 }
 
-class PostsNetworkServices: PostsFetcher, NetworkService {
-    
-    var restClient: RestClient { URLSession.shared }
+class PostsNetworkServices: BaseNetworkService, PostsFetcher {
     
     func fetchPosts() -> AnyPublisher<[Post], Error> {
         get(url: "\(Environment.URLS.base)/posts")
