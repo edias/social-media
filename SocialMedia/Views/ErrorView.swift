@@ -64,7 +64,8 @@ struct ErrorView: View {
 
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView(.generic, retryAction: {})
+        ErrorView(.offline, retryAction: {})
+            .preferredColorScheme(.dark)
             .previewDisplayName("Dark Mode")
     }
 }

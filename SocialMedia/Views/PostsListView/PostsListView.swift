@@ -40,7 +40,7 @@ struct PostsListView: View {
         }
         .onAppear { viewModel.loadPosts() }
         .navigationViewStyle(StackNavigationViewStyle())
-        .errorView(viewModel.errorType, retryAction: { viewModel.loadPosts() })
+        .onError(viewModel.errorType, retryAction: { viewModel.loadPosts() })
     }
 }
 

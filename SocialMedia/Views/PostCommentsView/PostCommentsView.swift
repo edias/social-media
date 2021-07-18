@@ -62,7 +62,7 @@ struct PostCommentsView: View {
             .navigationBarTitle("Comments", displayMode: .inline)
         }
         .onAppear { viewModel.loadComments(post.id) }
-        .errorView(viewModel.errorType, retryAction: { viewModel.loadComments(post.id) })
+        .onError(viewModel.errorType, retryAction: { viewModel.loadComments(post.id) })
     }
 }
 

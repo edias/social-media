@@ -19,7 +19,7 @@ extension View {
     }
     
     @ViewBuilder
-    func errorView(_ errorType: ErrorType? = nil, retryAction: @escaping () -> Void) -> some View {
+    func onError(_ errorType: ErrorType? = nil, retryAction: @escaping () -> Void) -> some View {
         ZStack {
             if let errorType = errorType {
                 ErrorView(errorType, retryAction: retryAction)
