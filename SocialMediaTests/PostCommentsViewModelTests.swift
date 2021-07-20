@@ -91,6 +91,49 @@ class PostCommentsViewModelTests: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
     
+    func test_errorIsSetToNilAfterRetrySuccessfully() {
+        
+        mockPostsNetworkServices.jsonString = ""
+        
+        let expectation = XCTestExpectation(description: "Error type is set to nil after retry action loads succesfully")
+        
+        let vm = PostCommentsViewModel(mockPostsNetworkServices)
+        
+        let stopTrigger = PassthroughSubject<Void, Never>()
+        
+        vm.$errorType.dropFirst().prefix(untilOutputFrom: stopTrigger).sink { errorType in
+            
+            XCTAssertNotNil(errorType)
+            XCTAssertEqual(errorType, ErrorType.generic)
+            
+            self.mockPostsNetworkServices.jsonString = """
+            [{
+            "name": "paul",
+            "email": "paul@gmail.com",
+            "body": "paul content"
+            }]
+            """
+            
+            //  After receiving an error event the error screen is displaying.
+            // Now we stop receiving events from this subscription.
+            stopTrigger.send()
+            
+            // We call this operation once this is what the try again button does
+            vm.loadComments(1)
+
+        }.store(in: &susbcriptions)
+        
+        vm.$errorType.dropFirst(2).sink { errorType in
+            XCTAssertNil(errorType)
+            expectation.fulfill()
+        }.store(in: &susbcriptions)
+        
+        vm.loadComments(1)
+        
+        wait(for: [expectation], timeout: 1)
+    }
+
+    
     func test_commentsAreFiltered() {
         
         mockPostsNetworkServices.jsonString = """
