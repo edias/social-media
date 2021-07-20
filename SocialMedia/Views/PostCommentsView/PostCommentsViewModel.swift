@@ -44,6 +44,7 @@ class PostCommentsViewModel: ObservableObject {
         } receiveValue: { [weak self] comments in
             self?.allComments = comments
             self?.comments = comments
+            self?.errorType = nil
         }.store(in: &susbcriptions)
     }
     

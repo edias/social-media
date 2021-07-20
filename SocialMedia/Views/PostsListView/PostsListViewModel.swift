@@ -44,6 +44,7 @@ class PostsListViewModel: ObservableObject {
         } receiveValue: { [weak self] posts in
             self?.allPosts = posts
             self?.posts = posts
+            self?.errorType = nil
         }.store(in: &susbcriptions)
     }
     
